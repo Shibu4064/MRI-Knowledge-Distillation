@@ -1,5 +1,3 @@
-# MRI-Knowledge-Distillation
-
 # 📡 MRI-Knowledge-Distillation
 
 <div align="center">

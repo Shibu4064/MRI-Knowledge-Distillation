@@ -1,0 +1,4 @@
+recipe,accepted_by_constraints,best_epoch,best_score,checkpoint,history
+preserve_clean,True,2,0.591746750361966,/kaggle/working/rtpdnet_mri/sensors_constrained_ft/checkpoint_preserve_clean.pt,/kaggle/working/rtpdnet_mri/sensors_constrained_ft/history_preserve_clean.csv
+balanced_robust,True,1,0.5684340185338185,/kaggle/working/rtpdnet_mri/sensors_constrained_ft/checkpoint_balanced_robust.pt,/kaggle/working/rtpdnet_mri/sensors_constrained_ft/history_balanced_robust.csv
+strong_robust,True,7,0.7024113095556102,/kaggle/working/rtpdnet_mri/sensors_constrained_ft/checkpoint_strong_robust.pt,/kaggle/working/rtpdnet_mri/sensors_constrained_ft/history_strong_robust.csv

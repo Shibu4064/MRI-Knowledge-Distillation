@@ -1,0 +1,370 @@
+{
+  "paper_framing": "Multi-objective radar-only deployment study",
+  "supervisor_message_integrated": true,
+  "selected_status": "accepted_constrained_finetune",
+  "selected_model_name": "Constrained RTPD-FT (strong_robust)",
+  "base_validation_clean": {
+    "model": "RTPD-Net clean reference validation",
+    "accuracy": 0.775,
+    "balanced_accuracy": 0.775,
+    "macro_f1": 0.7666666666666666,
+    "weighted_f1": 0.7666666666666666,
+    "nll": 0.9320916399462391,
+    "brier": 0.3729115872508622,
+    "ece": 0.1361276462674141,
+    "temperature": 0.9914240837097168
+  },
+  "base_validation_robustness": {
+    "mean_corrupted_macro_f1": 0.43934030955039355,
+    "worst_corrupted_macro_f1": 0.11714285714285715,
+    "mean_corrupted_accuracy": 0.48214285714285715,
+    "mean_corrupted_ece": 0.2402257479727268
+  },
+  "base_test_clean": {
+    "model": "RTPD-Net clean reference",
+    "accuracy": 0.725,
+    "balanced_accuracy": 0.725,
+    "macro_f1": 0.7150793650793651,
+    "weighted_f1": 0.7150793650793651,
+    "nll": 0.8224976057404767,
+    "brier": 0.3295781569487789,
+    "ece": 0.1700820565223694,
+    "temperature": 0.9914240837097168
+  },
+  "base_test_robustness": {
+    "model": "RTPD-Net clean reference",
+    "clean_accuracy": 0.725,
+    "clean_macro_f1": 0.7150793650793651,
+    "clean_ece": 0.1700820565223694,
+    "mean_corrupted_accuracy": 0.5272727272727272,
+    "mean_corrupted_macro_f1": 0.4822663810842815,
+    "worst_corrupted_macro_f1": 0.20105263157894737,
+    "worst_condition": "temporal_block_30",
+    "relative_robustness": 0.674423573991337,
+    "mean_corrupted_ece": 0.21412927826697176,
+    "mean_corrupted_nll": 1.5288634838555983,
+    "mean_corrupted_brier": 0.6262973848803516
+  },
+  "selected_test_clean": {
+    "model": "Constrained RTPD-FT (strong_robust)",
+    "accuracy": 0.8,
+    "balanced_accuracy": 0.8,
+    "macro_f1": 0.7911111111111111,
+    "weighted_f1": 0.7911111111111111,
+    "nll": 0.7255125010884236,
+    "brier": 0.2941820513375202,
+    "ece": 0.10494011119008065,
+    "temperature": 1.022557020187378
+  },
+  "selected_test_robustness": {
+    "model": "Constrained RTPD-FT (strong_robust)",
+    "clean_accuracy": 0.8,
+    "clean_macro_f1": 0.7911111111111111,
+    "clean_ece": 0.10494011119008065,
+    "mean_corrupted_accuracy": 0.6431818181818181,
+    "mean_corrupted_macro_f1": 0.6324089175046114,
+    "worst_corrupted_macro_f1": 0.38803030303030306,
+    "worst_condition": "frame_mask_50",
+    "relative_robustness": 0.7993932945985256,
+    "mean_corrupted_ece": 0.14943700622428546,
+    "mean_corrupted_nll": 1.1254353903834446,
+    "mean_corrupted_brier": 0.48311741580879936
+  },
+  "statistical_comparison": [
+    {
+      "comparison": "Constrained RTPD-FT (strong_robust) minus RTPD-Net clean reference",
+      "mean_delta_macro_f1": 0.07967650565254146,
+      "ci_low": 0.0,
+      "ci_high": 0.17802417027417014,
+      "probability_positive": 0.966,
+      "observed_delta_macro_f1": 0.076031746031746,
+      "two_sided_p_value": 0.2559488102379524
+    }
+  ],
+  "deployment_champions": [
+    {
+      "deployment_priority": "Clean fixed-split accuracy",
+      "best_method": "PARETO-RKD",
+      "value": 0.8,
+      "interpretation": "Best cross-subject and radar-corruption profile among prior enhanced students"
+    },
+    {
+      "deployment_priority": "Clean fixed-split macro-F1",
+      "best_method": "AURORA-RKD",
+      "value": 0.793,
+      "interpretation": "Best student calibration and complete missing-modality routing"
+    },
+    {
+      "deployment_priority": "Mean radar-corruption macro-F1",
+      "best_method": "PARETO-RKD",
+      "value": 0.723,
+      "interpretation": "Best cross-subject and radar-corruption profile among prior enhanced students"
+    },
+    {
+      "deployment_priority": "Worst radar-corruption macro-F1",
+      "best_method": "PARETO-RKD",
+      "value": 0.644,
+      "interpretation": "Best cross-subject and radar-corruption profile among prior enhanced students"
+    },
+    {
+      "deployment_priority": "Cross-subject accuracy",
+      "best_method": "PARETO-RKD",
+      "value": 0.71,
+      "interpretation": "Best cross-subject and radar-corruption profile among prior enhanced students"
+    },
+    {
+      "deployment_priority": "Cross-subject macro-F1",
+      "best_method": "PARETO-RKD",
+      "value": 0.684,
+      "interpretation": "Best cross-subject and radar-corruption profile among prior enhanced students"
+    },
+    {
+      "deployment_priority": "Calibration / lowest ECE",
+      "best_method": "AURORA-RKD",
+      "value": 0.0889,
+      "interpretation": "Best student calibration and complete missing-modality routing"
+    }
+  ],
+  "conclusions": [
+    {
+      "item": "Final constrained experiment status",
+      "text": "The constrained fine-tuning experiment supports the supervisor's hypothesis: RTPD-Net's clean performance can be approximately preserved while improving mean radar-corruption robustness."
+    },
+    {
+      "item": "Recommended main paper claim",
+      "text": "The strongest paper claim is a multi-objective radar-only deployment study: wearable-assisted training improves radar-only rehabilitation monitoring, but optimal model choice depends on deployment priority rather than one universally dominant architecture."
+    },
+    {
+      "item": "Recommended primary model framing",
+      "text": "Use RTPD-Net as the clean-performance reference, not as the only final answer. Use PARETO-RKD and AURORA-RKD as evidence for robustness, cross-subject stability, calibration, and missing-modality operating regimes."
+    },
+    {
+      "item": "Sensors suitability framing",
+      "text": "The study is suitable as a Sensors-style deployment analysis if it reports all objectives honestly: clean accuracy, macro-F1, robustness, calibration, grouped-subject generalisation, and limitations."
+    }
+  ],
+  "config": {
+    "main_cfg": {
+      "DATA_ROOT": null,
+      "WORK_DIR": "/kaggle/working/rtpdnet_mri",
+      "PROTOCOL": "P2_10",
+      "SEQ_LEN": 96,
+      "MIN_SEGMENT_FRACTION": 0.001,
+      "NUMERIC_LABEL_MODE": "auto",
+      "EXTRA_BACKGROUND_NUMERIC_IDS": [
+        -1
+      ],
+      "MIN_TOTAL_MANIFEST_SEGMENTS": 50,
+      "MIN_SUBJECTS_PER_CLASS": 3,
+      "MAX_SEGMENTS_PER_CLASS_PER_SUBJECT": null,
+      "TEST_SUBJECT_FRACTION": 0.2,
+      "VAL_SUBJECT_FRACTION_OF_REMAINDER": 0.25,
+      "SPLIT_SEED": 2026,
+      "SPLIT_SEARCH_ATTEMPTS": 50000,
+      "BATCH_SIZE": 24,
+      "NUM_WORKERS": 2,
+      "CACHE_SUBJECTS_PER_WORKER": 3,
+      "USE_WEIGHTED_SAMPLER": false,
+      "STAT_MAX_FRAMES_PER_SUBJECT": 4000,
+      "EMBED_DIM": 128,
+      "TCN_CHANNELS": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "TCN_DILATIONS": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "DROPOUT": 0.25,
+      "NUM_ATTENTION_HEADS": 4,
+      "PROJECTION_DIM": 96,
+      "LEARNING_RATE": 0.0003,
+      "SSL_LEARNING_RATE": 0.0004,
+      "WEIGHT_DECAY": 0.0001,
+      "PATIENCE": 5,
+      "GRAD_CLIP": 5.0,
+      "LABEL_SMOOTHING": 0.03,
+      "RUN_SSL": true,
+      "RUN_STRONG_BASELINES": true,
+      "SSL_EPOCHS": 10,
+      "STRONG_BASELINE_EPOCHS": 14,
+      "BASELINE_EPOCHS": 14,
+      "TEACHER_EPOCHS": 20,
+      "STUDENT_EPOCHS": 22,
+      "SSL_MASK_PROB": 0.3,
+      "SSL_CONTRASTIVE_TEMP": 0.15,
+      "SSL_RECON_WEIGHT": 1.0,
+      "SSL_CONTRASTIVE_WEIGHT": 0.35,
+      "TEACHER_AUX_WEIGHT": 0.2,
+      "RELIABILITY_WEIGHT": 0.3,
+      "CONSISTENCY_WEIGHT": 0.2,
+      "CORRUPTION_PROB": 0.85,
+      "KD_TEMPERATURE": 4.0,
+      "KD_LOGIT_WEIGHT": 0.9,
+      "KD_TEMPORAL_WEIGHT": 0.45,
+      "KD_RELATION_WEIGHT": 0.2,
+      "KD_PROTOTYPE_WEIGHT": 0.45,
+      "SUBJECT_ADV_WEIGHT": 0.08,
+      "TEMPORAL_ALIGNMENT_TEMP": 0.1,
+      "PROTOTYPE_TEMP": 0.12,
+      "AMP": true,
+      "CALIBRATION_BINS": 10,
+      "BOOTSTRAP_SAMPLES": 1000,
+      "RUN_ROBUSTNESS": true,
+      "RUN_ABLATIONS": false,
+      "ABLATION_EPOCHS": 12,
+      "RUN_GROUPED_CV": false,
+      "CV_USE_SSL": true,
+      "CV_SSL_EPOCHS": 4,
+      "CV_EPOCHS": 8,
+      "CV_FOLDS": 5,
+      "REQUIRE_GPU": true,
+      "QUICK_RUN": false,
+      "SEED": 2026
+    },
+    "constrained_ft_cfg": {
+      "CLEAN_F1_TOLERANCE": 0.005,
+      "CLEAN_ACC_TOLERANCE": 0.01,
+      "MAX_ECE_INCREASE": 0.03,
+      "EPOCHS": 10,
+      "LEARNING_RATE": 4e-05,
+      "WEIGHT_DECAY": 5e-05,
+      "PATIENCE": 4,
+      "GRAD_CLIP": 3.0,
+      "CLEAN_CE_WEIGHT": 0.4,
+      "ROBUST_CE_WEIGHT": 0.45,
+      "CLEAN_ANCHOR_KL_WEIGHT": 0.85,
+      "CORRUPT_ANCHOR_KL_WEIGHT": 0.35,
+      "CONSISTENCY_WEIGHT": 0.18,
+      "L2SP_WEIGHT": 2e-05,
+      "ANCHOR_TEMPERATURE": 3.0,
+      "MIN_SEVERITY": 0.08,
+      "MAX_SEVERITY": 0.45,
+      "RECIPES": [
+        "preserve_clean",
+        "balanced_robust",
+        "strong_robust"
+      ],
+      "VALIDATION_CORRUPTIONS": [
+        [
+          "frame_mask",
+          0.2
+        ],
+        [
+          "frame_mask",
+          0.35
+        ],
+        [
+          "temporal_block",
+          0.3
+        ],
+        [
+          "channel_drop",
+          0.2
+        ],
+        [
+          "gaussian",
+          0.3
+        ],
+        [
+          "spatial_mask",
+          0.25
+        ],
+        [
+          "amplitude",
+          0.35
+        ]
+      ],
+      "TEST_CORRUPTIONS": [
+        [
+          "clean",
+          null
+        ],
+        [
+          "frame_mask_10",
+          [
+            "frame_mask",
+            0.1
+          ]
+        ],
+        [
+          "frame_mask_30",
+          [
+            "frame_mask",
+            0.3
+          ]
+        ],
+        [
+          "frame_mask_50",
+          [
+            "frame_mask",
+            0.5
+          ]
+        ],
+        [
+          "temporal_block_30",
+          [
+            "temporal_block",
+            0.3
+          ]
+        ],
+        [
+          "channel_drop_20",
+          [
+            "channel_drop",
+            0.2
+          ]
+        ],
+        [
+          "channel_drop_40",
+          [
+            "channel_drop",
+            0.4
+          ]
+        ],
+        [
+          "gaussian_25",
+          [
+            "gaussian",
+            0.25
+          ]
+        ],
+        [
+          "gaussian_50",
+          [
+            "gaussian",
+            0.5
+          ]
+        ],
+        [
+          "spatial_mask_30",
+          [
+            "spatial_mask",
+            0.3
+          ]
+        ],
+        [
+          "amplitude_50",
+          [
+            "amplitude",
+            0.5
+          ]
+        ],
+        [
+          "temporal_roll_50",
+          [
+            "temporal_roll",
+            0.5
+          ]
+        ]
+      ],
+      "BOOTSTRAP_SAMPLES": 2000,
+      "PERMUTATION_SAMPLES": 5000,
+      "OUTPUT_SUBDIR": "sensors_constrained_ft"
+    }
+  }
+}

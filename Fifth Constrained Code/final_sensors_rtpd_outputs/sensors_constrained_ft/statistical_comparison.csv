@@ -1,0 +1,2 @@
+comparison,mean_delta_macro_f1,ci_low,ci_high,probability_positive,observed_delta_macro_f1,two_sided_p_value
+Constrained RTPD-FT (strong_robust) minus RTPD-Net clean reference,0.07967650565254146,0.0,0.17802417027417014,0.966,0.076031746031746,0.2559488102379524

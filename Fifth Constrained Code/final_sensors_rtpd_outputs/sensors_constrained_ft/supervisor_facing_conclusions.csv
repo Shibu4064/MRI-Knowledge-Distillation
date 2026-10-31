@@ -1,0 +1,5 @@
+item,text
+Final constrained experiment status,The constrained fine-tuning experiment supports the supervisor's hypothesis: RTPD-Net's clean performance can be approximately preserved while improving mean radar-corruption robustness.
+Recommended main paper claim,"The strongest paper claim is a multi-objective radar-only deployment study: wearable-assisted training improves radar-only rehabilitation monitoring, but optimal model choice depends on deployment priority rather than one universally dominant architecture."
+Recommended primary model framing,"Use RTPD-Net as the clean-performance reference, not as the only final answer. Use PARETO-RKD and AURORA-RKD as evidence for robustness, cross-subject stability, calibration, and missing-modality operating regimes."
+Sensors suitability framing,"The study is suitable as a Sensors-style deployment analysis if it reports all objectives honestly: clean accuracy, macro-F1, robustness, calibration, grouped-subject generalisation, and limitations."

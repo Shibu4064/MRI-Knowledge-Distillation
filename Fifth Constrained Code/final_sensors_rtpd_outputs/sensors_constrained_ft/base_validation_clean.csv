@@ -1,0 +1,2 @@
+model,accuracy,balanced_accuracy,macro_f1,weighted_f1,nll,brier,ece,temperature
+RTPD-Net clean reference validation,0.775,0.775,0.7666666666666666,0.7666666666666666,0.9320916399462391,0.3729115872508622,0.1361276462674141,0.9914240837097168

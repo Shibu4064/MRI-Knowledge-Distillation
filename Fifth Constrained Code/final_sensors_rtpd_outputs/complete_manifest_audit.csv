@@ -1,0 +1,11 @@
+class_id,class_name,segments,subjects
+0,left upper-limb extension,20,20
+1,right upper-limb extension,20,20
+2,both upper-limb extension,20,20
+3,left front lunge,20,20
+4,right front lunge,20,20
+5,squat,20,20
+6,left side lunge,20,20
+7,right side lunge,20,20
+8,left limb extension,20,20
+9,right limb extension,20,20

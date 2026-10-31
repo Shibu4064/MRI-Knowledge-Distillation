@@ -1,0 +1,31 @@
+split,class_id,class_name,segments,subjects
+train,0,left upper-limb extension,12,12
+train,1,right upper-limb extension,12,12
+train,2,both upper-limb extension,12,12
+train,3,left front lunge,12,12
+train,4,right front lunge,12,12
+train,5,squat,12,12
+train,6,left side lunge,12,12
+train,7,right side lunge,12,12
+train,8,left limb extension,12,12
+train,9,right limb extension,12,12
+validation,0,left upper-limb extension,4,4
+validation,1,right upper-limb extension,4,4
+validation,2,both upper-limb extension,4,4
+validation,3,left front lunge,4,4
+validation,4,right front lunge,4,4
+validation,5,squat,4,4
+validation,6,left side lunge,4,4
+validation,7,right side lunge,4,4
+validation,8,left limb extension,4,4
+validation,9,right limb extension,4,4
+test,0,left upper-limb extension,4,4
+test,1,right upper-limb extension,4,4
+test,2,both upper-limb extension,4,4
+test,3,left front lunge,4,4
+test,4,right front lunge,4,4
+test,5,squat,4,4
+test,6,left side lunge,4,4
+test,7,right side lunge,4,4
+test,8,left limb extension,4,4
+test,9,right limb extension,4,4

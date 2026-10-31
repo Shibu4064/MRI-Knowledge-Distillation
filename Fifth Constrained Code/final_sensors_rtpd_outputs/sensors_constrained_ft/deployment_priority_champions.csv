@@ -1,0 +1,8 @@
+deployment_priority,best_method,value,interpretation
+Clean fixed-split accuracy,PARETO-RKD,0.8,Best cross-subject and radar-corruption profile among prior enhanced students
+Clean fixed-split macro-F1,AURORA-RKD,0.793,Best student calibration and complete missing-modality routing
+Mean radar-corruption macro-F1,PARETO-RKD,0.723,Best cross-subject and radar-corruption profile among prior enhanced students
+Worst radar-corruption macro-F1,PARETO-RKD,0.644,Best cross-subject and radar-corruption profile among prior enhanced students
+Cross-subject accuracy,PARETO-RKD,0.71,Best cross-subject and radar-corruption profile among prior enhanced students
+Cross-subject macro-F1,PARETO-RKD,0.684,Best cross-subject and radar-corruption profile among prior enhanced students
+Calibration / lowest ECE,AURORA-RKD,0.0889,Best student calibration and complete missing-modality routing
